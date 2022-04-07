@@ -1,1 +1,34 @@
+#include <stdio.h>
 
+    char programa (char *letras[], int soma)
+    {
+        char hashtag, igual;
+        char resultado[soma];
+        int digito, vezes, i = 0;
+        
+        
+        printf ("Informe quantas vezes cada numero vai ser utilizado: \n");
+        for (int i=0; i<soma; i++){
+        scanf (" %c%d%c%d", &hashtag,&digito, &igual, &vezes);
+        resultado[i]=letras[digito][vezes];
+        }
+        
+        printf("O resultado foi: %s\n ", resultado);
+    }
+    
+int main(){
+    
+    int soma=0;
+    char *letras[10] = {  "  ", "  ", " ABC",
+                        " DEF", " GHI", " JKL",
+                        " MNO", " PQRS", " TUV", " WXYZ"};
+    
+    printf ("Informe a quantidade de letras da palavra: \n");
+    scanf ("%d",&soma);
+    
+    programa(letras, soma);
+    
+    
+    return 0;
+    
+}
